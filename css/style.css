@@ -1,0 +1,185 @@
+
+body {
+    padding: 0;
+    margin:0 auto;
+    background: #a29bfe;
+    color: white;
+    overflow: hidden;
+
+}    
+.board {
+     
+        display: grid;
+        justify-content: center;
+        align-content: center;
+       
+        grid-template-columns: repeat(3,15vw);
+        grid-template-rows: repeat(3, 30vh);
+        min-height: 100vh;
+        -webkit-box-shadow: 0px 0px 27px 7px rgba(0,0,0,0.79); 
+        box-shadow: 0px 0px 27px 7px rgba(0,0,0,0.79);
+        gap:10px
+ }
+ .board>span {
+
+    border: 1px solid white r;
+    border-radius: 0.75rem;
+   
+    outline:none;
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+
+}
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(39,38,38);
+    position:absolute;
+    display:flex ;
+    justify-content:right;
+    cursor: pointer;
+    right:10px;
+    top:27px;
+    transition: 0.5s;
+
+}
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    top:5px;
+    left:5px;
+    background-color: white;
+    position: absolute;
+    box-shadow: inset 4px 4px 4px rgb(175, 173, 173),
+                inset -4px -4px 4px rgb(195, 193, 198 )/ 90%;
+    transition: 0.5s;            
+            
+} 
+.modeoff .flicker {
+ 
+    left:48px;
+}
+.soundoff {
+   
+    font-size:30px;
+    position:absolute;
+    right: 10px;
+    top:5px;
+    transition: 0.5s;
+    color: #a29bfe;
+
+}
+
+.soundon {
+
+    display: none;
+    transition: 0.5s;
+    color: #a29bfe;
+}
+.modeoff .soundon {
+
+    font-size:30px;
+    position:absolute;
+    top:7px;
+    left:5px;
+    transition: 0.5s;
+    display: inline;
+}
+.modeoff .soundoff {
+
+    display: none;
+    transition: 0.5s;
+}
+button {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+.button.blue{
+    background-color: #269CE9;
+    border: none;
+    border-radius: 25px;
+    padding: 19px;
+    transition: 0.5s;
+  }
+  
+  .button.blue:hover{
+    background-color: #004370;
+    color:#a29bfe;
+    transition: 0.5s;
+  }
+  
+  .button.blue:active{
+    background: #269CE9;
+  }
+
+  #txt {
+    display: none;
+   font-size: 5rem;
+   color: #74b9ff;
+    
+  }
+  #btn {
+    display: none;
+    margin: 0 auto;
+    width: auto;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+    align-items:center ;
+   
+ 
+   
+  }
+  #result {
+     position: absolute;
+     display: flex;
+     z-index: 100;
+     top:50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     flex-direction: column;
+
+  }
+
+  @media only screen and (max-width: 700px) {
+    .board>span {
+      font-size: 30px;
+    }
+    #btn {
+      height: auto;
+      font-size: 15px;
+    }
+    #txt {
+      height: auto;
+      font-size: 2rem;
+    }
+
+
+}
+    
+  @media only screen and (min-width: 700px) {
+    .board>span {
+      font-size: 50px;
+    }
+
+}
+    @media only screen and (min-width: 800px) {
+        .board>span {
+          font-size: 100px;
+        }
+   
+  }
