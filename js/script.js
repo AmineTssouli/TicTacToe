@@ -10,7 +10,7 @@ var squares = document.querySelectorAll("span");
 var step = new Audio("./sounds/step.mp3")
 var gameover = new Audio("./sounds/gameover.mp3")
 
-showResult("it's a Tie")
+
 
 if (window.localStorage.getItem("mute") == null)
 {
