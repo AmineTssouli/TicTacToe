@@ -125,12 +125,12 @@ function checkWinner(checked_squares,turn) {
     if(player1)
     {
         playSound(gameover)
-        showResult("Player 1 Won")
+        showResult("Player O Won")
     }
     else if(player2)
     {
         playSound(gameover)
-        showResult("Player 2 Won")
+        showResult("Player X Won")
     }
     else if (player1 === 0 && player2 === 0 && turn == 0) 
      {  
