@@ -205,12 +205,6 @@ button {
   }
   @media screen and (min-width: 1024px) and (min-height: 600px){
     
- 
-    .board {
-      grid-template-columns: repeat(3,30vw);
-      grid-template-rows: repeat(3, 20vh);
-
-    }
     .board>span {
       font-size: 120px;
     }
