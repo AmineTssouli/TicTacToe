@@ -1,3 +1,3 @@
 ﻿# Tic Tac Toe
 
-Using Html, Css and Javascript.
+Using Html, Css and Vanilla Javascript.
